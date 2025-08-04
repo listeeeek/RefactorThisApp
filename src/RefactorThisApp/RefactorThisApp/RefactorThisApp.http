@@ -1,6 +1,0 @@
-@RefactorThisApp_HostAddress = http://localhost:5289
-
-GET {{RefactorThisApp_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

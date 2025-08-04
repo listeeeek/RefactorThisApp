@@ -6,7 +6,7 @@ namespace RefactorThisApp;
 
 public class AnimalRepository // : IAnimalRepository
 {
-    private IEnumerable<Animal> _animals = new List<Animal>()
+    private IEnumerable<Animal> _bazaDanych = new List<Animal>()
     {
         new Animal()
         {
@@ -82,7 +82,7 @@ public class AnimalRepository // : IAnimalRepository
         var lista = new List<Animal>();
 
         //TODO: refactor me pls
-        foreach (var animal in _animals)
+        foreach (var animal in _bazaDanych)
         {
             if (czyAktywne)
             {
@@ -109,7 +109,7 @@ public class AnimalRepository // : IAnimalRepository
     // kryteriow spelnionych
     public Option<Animal> GetAnimal(string nazwa)
     {
-        var v = _animals.FirstOrDefault(s => s.Nazwa.Equals(nazwa, StringComparison.CurrentCultureIgnoreCase));
+        var v = _bazaDanych.FirstOrDefault(s => s.Nazwa.Equals(nazwa, StringComparison.CurrentCultureIgnoreCase));
 
         var blad = "Nie znaleziono zwierzaka";
 
